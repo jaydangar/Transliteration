@@ -1,7 +1,3 @@
-import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
-
 import 'languages.dart';
 
 /// Utility class used for internal use...
@@ -9,11 +5,6 @@ class Utility {
   /// Base URL
   static final String transliterationBaseURL =
       'https://www.google.com/transliterate/all';
-
-  /// This function will convert HttpResponse to json String
-  static Future<Object> readResponse(HttpClientResponse response) async {
-    return await response.transform(utf8.decoder).transform(json.decoder).first;
-  }
 
   /// Converts Enums to Google Language Codes
   static String getLanguageCode(Languages languageCode) {

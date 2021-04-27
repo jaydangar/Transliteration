@@ -16,7 +16,7 @@ String transliterationResponseToJson(List<TransliterationResponse> data) {
 /// PODO class
 class TransliterationResponse {
   String sourceString;
-  List<dynamic> transliterationSuggestions;
+  List<String> transliterationSuggestions;
 
   TransliterationResponse({
     this.sourceString,
@@ -27,11 +27,11 @@ class TransliterationResponse {
       new TransliterationResponse(
         sourceString: json["ew"],
         transliterationSuggestions:
-            new List<dynamic>.from(json["hws"].map((x) => x)),
+            new List<String>.from(json["hws"].map((x) => x)),
       );
 
   Map<String, dynamic> toJson() => {
         "ew": sourceString,
-        "hws": new List<dynamic>.from(transliterationSuggestions.map((x) => x)),
+        "hws": new List<String>.from(transliterationSuggestions.map((x) => x)),
       };
 }
