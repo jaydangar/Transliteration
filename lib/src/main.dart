@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
@@ -12,7 +11,7 @@ class Transliteration {
   /// This function transliterates english text to the given language code.
   /// Exception will be thrown if user is not connected to internet or server is not responding.
   /// Returns Input String and top 5 suggestions in a list for transliteration.
-  static Future<TransliterationResponse> transliterate(
+  static Future<TransliterationResponse?> transliterate(
     String inputString,
     Languages languageCode,
   ) async {

@@ -19,8 +19,8 @@ class TransliterationResponse {
   List<String> transliterationSuggestions;
 
   TransliterationResponse({
-    this.sourceString,
-    this.transliterationSuggestions,
+    this.sourceString = '',
+    this.transliterationSuggestions = const [],
   });
 
   factory TransliterationResponse.fromJson(Map<String, dynamic> json) =>
